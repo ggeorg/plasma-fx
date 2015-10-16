@@ -12,6 +12,7 @@ import com.sun.jna.Pointer;
 public interface ClutterLibrary extends ClutterActorApi
     , ClutterStageApi
     , ClutterTextApi
+    , ClutterScrollActorApi
     , ClutterTextBufferApi
     , ClutterAlignConstraintApi
     , ClutterLayoutManagerApi
