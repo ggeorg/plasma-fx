@@ -8,20 +8,60 @@ import com.sun.jna.Structure;
 
 public class ClutterColor extends Structure {
 
-  public static final ClutterColor BLACK = new ClutterColor();
-  public static final ClutterColor WHITE = new ClutterColor(255, 255, 255);
-  public static final ClutterColor BLUE = new ClutterColor(0, 0, 255);
-  public static final ClutterColor RED = new ClutterColor(255, 0, 0);
-  public static final ClutterColor GREEN = new ClutterColor(0, 255, 0);
-  public static final ClutterColor YELLOW = new ClutterColor(255, 255, 0);
-  public static final ClutterColor CYAN = new ClutterColor(0, 255, 255);
-  public static final ClutterColor MAGENTA = new ClutterColor(255, 0, 255);
+  // public static final ClutterColor BLACK = new ClutterColor();
+  // public static final ClutterColor WHITE = new ClutterColor(255, 255, 255);
+  // public static final ClutterColor BLUE = new ClutterColor(0, 0, 255);
+  // public static final ClutterColor RED = new ClutterColor(255, 0, 0);
+  // public static final ClutterColor GREEN = new ClutterColor(0, 255, 0);
+  // public static final ClutterColor YELLOW = new ClutterColor(255, 255, 0);
+  // public static final ClutterColor CYAN = new ClutterColor(0, 255, 255);
+  // public static final ClutterColor MAGENTA = new ClutterColor(255, 0, 255);
 
-  public static final int BUTTER = 0xedd400ff;
-  public static final int BUTTER_LIGHT = 0xfce94fff;
-
-  public static final int ALUMINIUM_6 = 0x2e3436ff;
-  public static final int TRANSPARENT = 0x00000000;
+  public static final ClutterColor WHITE = new ClutterColor(0xffffffff);
+  public static final ClutterColor BLACK = new ClutterColor(0x000000ff);
+  public static final ClutterColor RED = new ClutterColor(0xff0000ff);
+  public static final ClutterColor DARK_RED = new ClutterColor(0x800000ff);
+  public static final ClutterColor GREEN = new ClutterColor(0x00ff00ff);
+  public static final ClutterColor DARK_GREEN = new ClutterColor(0x008000ff);
+  public static final ClutterColor BLUE = new ClutterColor(0x0000ffff);
+  public static final ClutterColor DARK_BLUE = new ClutterColor(0x000080ff);
+  public static final ClutterColor CYAN = new ClutterColor(0x00ffffff);
+  public static final ClutterColor DARK_CYAN = new ClutterColor(0x008080ff);
+  public static final ClutterColor MAGENTA = new ClutterColor(0xff00ffff);
+  public static final ClutterColor DARK_MAGENTA = new ClutterColor(0x800080ff);
+  public static final ClutterColor YELLOW = new ClutterColor(0xffff00ff);
+  public static final ClutterColor DARK_YELLOW = new ClutterColor(0x808000ff);
+  public static final ClutterColor GRAY = new ClutterColor(0xa0a0a4ff);
+  public static final ClutterColor DARK_GRAY = new ClutterColor(0x808080ff);
+  public static final ClutterColor LIGHT_GRAY = new ClutterColor(0xc0c0c0ff);
+  public static final ClutterColor BUTTER = new ClutterColor(0xedd400ff);
+  public static final ClutterColor BUTTER_LIGHT = new ClutterColor(0xfce94fff);
+  public static final ClutterColor BUTTER_DARK = new ClutterColor(0xc4a000ff);
+  public static final ClutterColor ORANGE = new ClutterColor(0xf57900ff);
+  public static final ClutterColor ORANGE_LIGHT = new ClutterColor(0xfcaf3fff);
+  public static final ClutterColor ORANGE_DARK = new ClutterColor(0xce5c00ff);
+  public static final ClutterColor CHOCOLATE = new ClutterColor(0xc17d11ff);
+  public static final ClutterColor CHOCOLATE_LIGHT = new ClutterColor(0xe9b96eff);
+  public static final ClutterColor CHOCOLATE_DARK = new ClutterColor(0x8f5902ff);
+  public static final ClutterColor CHAMELEON = new ClutterColor(0x73d216ff);
+  public static final ClutterColor CHAMELEON_LIGHT = new ClutterColor(0x8ae234ff);
+  public static final ClutterColor CHAMELEON_DARK = new ClutterColor(0x4e9a06ff);
+  public static final ClutterColor SKY_BLUE = new ClutterColor(0x3465a4ff);
+  public static final ClutterColor SKY_BLUE_LIGHT = new ClutterColor(0x729fcfff);
+  public static final ClutterColor SKY_BLUE_DARK = new ClutterColor(0x204a87ff);
+  public static final ClutterColor PLUM = new ClutterColor(0x75507bff);
+  public static final ClutterColor PLUM_LIGHT = new ClutterColor(0xad7fa8ff);
+  public static final ClutterColor PLUM_DARK = new ClutterColor(0x5c3566ff);
+  public static final ClutterColor SCARLET_RED = new ClutterColor(0xcc0000ff);
+  public static final ClutterColor SCARLET_RED_LIGHT = new ClutterColor(0xef2929ff);
+  public static final ClutterColor SCARLET_RED_DARK = new ClutterColor(0xa40000ff);
+  public static final ClutterColor ALUMINIUM_1 = new ClutterColor(0xeeeeecff);
+  public static final ClutterColor ALUMINIUM_2 = new ClutterColor(0xd3d7cfff);
+  public static final ClutterColor ALUMINIUM_3 = new ClutterColor(0xbabdb6ff);
+  public static final ClutterColor ALUMINIUM_4 = new ClutterColor(0x888a85ff);
+  public static final ClutterColor ALUMINIUM_5 = new ClutterColor(0x555753ff);
+  public static final ClutterColor ALUMINIUM_6 = new ClutterColor(0x2e3436ff);
+  public static final ClutterColor TRANSPARENT = new ClutterColor(0x00000000);
 
   public static ClutterColor decodeColor(String value) {
     if (value == null) {
@@ -55,7 +95,7 @@ public class ClutterColor extends Structure {
 
     return color;
   }
-  
+
   // -------------------------------------------------------------------
 
   public byte red;
@@ -84,8 +124,6 @@ public class ClutterColor extends Structure {
 
   public ClutterColor(int rgba) {
     this((byte) ((rgba >> 24) & 0xff), (byte) ((rgba >> 16) & 0xff), (byte) ((rgba >> 8) & 0xff), (byte) (rgba & 0xff));
-
-    System.out.println(String.format("%x ? %s", rgba, this.toString()));
   }
 
   @SuppressWarnings("rawtypes")

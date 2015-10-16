@@ -24,8 +24,8 @@ public class ClutterMargin extends Structure {
     this(margin, margin, margin, margin);
   }
   
-  public ClutterMargin(float hmargin, float vmargin) {
-    this(hmargin, hmargin, vmargin, vmargin);
+  public ClutterMargin(float marginX, float marginY) {
+    this(marginX, marginX, marginY, marginY);
   }
   
   public ClutterMargin(float left, float right, float top, float bottom) {

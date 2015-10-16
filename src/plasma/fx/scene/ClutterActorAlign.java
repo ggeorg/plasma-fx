@@ -1,7 +1,5 @@
 package plasma.fx.scene;
 
-import plasma.jna.clutter.ClutterLibrary;
-
 /**
  * Controls how a {@link ClutterActor} should align itself inside the extra
  * space assigned to it during the allocation.

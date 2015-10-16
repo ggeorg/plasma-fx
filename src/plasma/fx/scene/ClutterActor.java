@@ -212,6 +212,14 @@ public class ClutterActor extends GObject implements ClutterContainer {
     return ClutterLibrary.INSTANCE.clutter_actor_get_margin_right(this);
   }
   
+  public void setMargin(float margin) {
+    setMargin(new ClutterMargin(margin));
+  }
+  
+  public void setMargin(float marginX, float marginY) {
+    setMargin(new ClutterMargin(marginX, marginY));
+  }
+  
   public void setMargin(ClutterMargin margin) {
     ClutterLibrary.INSTANCE.clutter_actor_set_margin(this, margin);
   }
@@ -251,6 +259,10 @@ public class ClutterActor extends GObject implements ClutterContainer {
   
   public byte getOpacity() {
     return ClutterLibrary.INSTANCE.clutter_actor_get_opacity(this); 
+  }
+  
+  public void setBackgroundColor(int rgba) {
+    setBackgroundColor(new ClutterColor(rgba));
   }
   
   public void setBackgroundColor(String color) {
