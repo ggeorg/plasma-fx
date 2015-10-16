@@ -14,15 +14,7 @@ public class ClutterBoxLayout extends ClutterLayoutManager {
   }
 
   public ClutterOrientation getOrientation() {
-    int orientation = ClutterLibrary.INSTANCE.clutter_box_layout_get_orientation(this);
-    switch (orientation) {
-    case 0:
-      return ClutterOrientation.CLUTTER_ORIENTATION_HORIZONTAL;
-    case 1:
-      return ClutterOrientation.CLUTTER_ORIENTATION_VERTICAL;
-    default:
-      return ClutterOrientation.CLUTTER_ORIENTATION_HORIZONTAL;
-    }
+    return ClutterOrientation.valueOf(ClutterLibrary.INSTANCE.clutter_box_layout_get_orientation(this));
   }
 
   /**

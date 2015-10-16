@@ -17,7 +17,5 @@ public class ClutterBinLayout extends ClutterLayoutManager {
   public ClutterBinLayout() {
     super(ClutterLibrary.INSTANCE.clutter_bin_layout_new(CLUTTER_BIN_ALIGNMENT_FIXED, CLUTTER_BIN_ALIGNMENT_FIXED));
   }
-  
-  public static ClutterBinLayout valueOf(int ordinal)
 
 }

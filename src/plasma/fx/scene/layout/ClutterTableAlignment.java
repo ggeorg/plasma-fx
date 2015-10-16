@@ -19,5 +19,18 @@ public enum ClutterTableAlignment {
    * Align the child to the bottom or to the right of a cell in the table,
    * depending on the axis.
    */
-  CLUTTER_TABLE_ALIGNMENT_END
+  CLUTTER_TABLE_ALIGNMENT_END;
+
+  public static ClutterTableAlignment valueOf(int ordinal) {
+    switch (ordinal) {
+    case 0:
+      return CLUTTER_TABLE_ALIGNMENT_START;
+    case 1:
+      return CLUTTER_TABLE_ALIGNMENT_CENTER;
+    case 2:
+      return CLUTTER_TABLE_ALIGNMENT_END;
+    default:
+      return CLUTTER_TABLE_ALIGNMENT_START;
+    }
+  }
 }
