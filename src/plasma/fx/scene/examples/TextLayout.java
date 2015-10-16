@@ -50,27 +50,36 @@ public class TextLayout {
 
     ClutterText text = new ClutterText();
     text.setMargin(new ClutterMargin(15, 5));
-    //text.setWidth(256);
+    text.setExpandX(true);
+    text.setExpandY(false);
     text.setBackgroundColor(ClutterColor.GREEN);
     text.setMarkup(markup);
     stage.addChild(text);
     
     ClutterText text2 = new ClutterText();
-    //text2.setWidth(256);
+    text2.setExpandX(true);
+    text2.setExpandY(false);
     text2.setBackgroundColor(ClutterColor.CYAN);
     text2.setMargin(new ClutterMargin(15, 5));
     text2.setMarkup(markup);
     stage.addChild(text2);
     
     ClutterText text3 = new ClutterText();
-    //text3.setMargin(new ClutterMargin(15, 5));
+    text3.setExpandX(true);
+    text3.setExpandY(false);
+    text3.setMargin(new ClutterMargin(15, 5));
     text3.setBackgroundColor(ClutterColor.GREEN);
+    text3.setWidth(256);
+    text3.setExpandX(true);
     text3.setText("Hello George...");
     stage.addChild(text3);
     
     ClutterText text4 = new ClutterText();
-    //text4.setMargin(new ClutterMargin(15, 5));
+    text4.setExpandX(true);
+    text4.setExpandY(false);
+    text4.setMargin(new ClutterMargin(15, 5));
     text4.setBackgroundColor(ClutterColor.CYAN);
+    text4.setExpandX(true);
     text4.setText("Hi!!!");
     stage.addChild(text4);
     
